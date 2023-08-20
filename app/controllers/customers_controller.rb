@@ -5,7 +5,7 @@ class CustomersController < ApplicationController
         if user.valid?
             user_attributes = user.attributes.except("updated_at", "created_at", "password_digest")
 
-            app_response(message: "User created successfully", status: :created, data: {user: user})
+            app_response(message: "User created successfully", status: :created, data: {user: user_attributes})
         end
     end
 

@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   post '/customer/register', to:'customers#register'
   post '/customer/login', to:'customers#login'
+
+  # Loggin in for admin
+  post '/admin/login', to:'admins#login'
 end
