@@ -2831,3 +2831,38 @@ Processing by AdminsController#login as */*
 Completed 200 OK in 435ms (Views: 0.3ms | ActiveRecord: 1.8ms | Allocations: 3101)
 
 
+Started POST "/admin/login" for 127.0.0.1 at 2023-08-20 14:52:56 +0300
+Processing by AdminsController#login as */*
+  Parameters: {"username"=>"admin", "email"=>"admin@gmail.com", "phone_number"=>"0742453610", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "admin"=>{"username"=>"admin", "email"=>"admin@gmail.com", "phone_number"=>"0742453610"}}
+[31mUnpermitted parameter: :admin. Context: { controller: AdminsController, action: login, request: #<ActionDispatch::Request:0x00007f25090120b8>, params: {"username"=>"admin", "email"=>"admin@gmail.com", "phone_number"=>"0742453610", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"admins", "action"=>"login", "admin"=>{"username"=>"admin", "email"=>"admin@gmail.com", "phone_number"=>"0742453610"}} }[0m
+[31mUnpermitted parameter: :admin. Context: { controller: AdminsController, action: login, request: #<ActionDispatch::Request:0x00007f25090120b8>, params: {"username"=>"admin", "email"=>"admin@gmail.com", "phone_number"=>"0742453610", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"admins", "action"=>"login", "admin"=>{"username"=>"admin", "email"=>"admin@gmail.com", "phone_number"=>"0742453610"}} }[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE (username = 'admin') ORDER BY "admins"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:16:in `login'
+[31mUnpermitted parameter: :admin. Context: { controller: AdminsController, action: login, request: #<ActionDispatch::Request:0x00007f25090120b8>, params: {"username"=>"admin", "email"=>"admin@gmail.com", "phone_number"=>"0742453610", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"admins", "action"=>"login", "admin"=>{"username"=>"admin", "email"=>"admin@gmail.com", "phone_number"=>"0742453610"}} }[0m
+Completed 200 OK in 293ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1333)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2023-08-20 14:52:58 +0300
+Processing by AdminsController#login as */*
+  Parameters: {"username"=>"admin", "email"=>"admin@gmail.com", "phone_number"=>"0742453610", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "admin"=>{"username"=>"admin", "email"=>"admin@gmail.com", "phone_number"=>"0742453610"}}
+[31mUnpermitted parameter: :admin. Context: { controller: AdminsController, action: login, request: #<ActionDispatch::Request:0x00007f2508fb1ba0>, params: {"username"=>"admin", "email"=>"admin@gmail.com", "phone_number"=>"0742453610", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"admins", "action"=>"login", "admin"=>{"username"=>"admin", "email"=>"admin@gmail.com", "phone_number"=>"0742453610"}} }[0m
+[31mUnpermitted parameter: :admin. Context: { controller: AdminsController, action: login, request: #<ActionDispatch::Request:0x00007f2508fb1ba0>, params: {"username"=>"admin", "email"=>"admin@gmail.com", "phone_number"=>"0742453610", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"admins", "action"=>"login", "admin"=>{"username"=>"admin", "email"=>"admin@gmail.com", "phone_number"=>"0742453610"}} }[0m
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE (username = 'admin') ORDER BY "admins"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:16:in `login'
+[31mUnpermitted parameter: :admin. Context: { controller: AdminsController, action: login, request: #<ActionDispatch::Request:0x00007f2508fb1ba0>, params: {"username"=>"admin", "email"=>"admin@gmail.com", "phone_number"=>"0742453610", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"admins", "action"=>"login", "admin"=>{"username"=>"admin", "email"=>"admin@gmail.com", "phone_number"=>"0742453610"}} }[0m
+Completed 200 OK in 292ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1329)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMpesas (20230820211215)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "mpesas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "phoneNumber" varchar, "amount" varchar, "checkoutRequestID" varchar, "merchantRequestID" varchar, "mpesa" varchar, "RecieptNumber" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230820211215"]]
+  [1m[36mTRANSACTION (17.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAccessTokens (20230820211245)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "access_tokens" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "token" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230820211245"]]
+  [1m[36mTRANSACTION (22.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
