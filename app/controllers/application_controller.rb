@@ -6,6 +6,14 @@ class ApplicationController < ActionController::API
         }, status: status
     end
 
+    # Getting the image from active storage
+    def get_inage(uid)
+        blob = ActiveStorage::Blob.find(uid)
+        image = url_for(blob)
+
+        return image
+    end
+
     # Generating secret key
     def encode(uid, email)
         payload = {
