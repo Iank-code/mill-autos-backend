@@ -2866,3 +2866,368 @@ Migrating to CreateAccessTokens (20230820211245)
   [1m[36mTRANSACTION (22.3ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: 7808-197-232-61-209.ngrok-free.app
+Started GET "/" for 197.232.61.209 at 2023-08-21 00:28:39 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.5ms | Allocations: 660)
+Completed 200 OK in 20ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 6458)
+
+
+Started GET "/" for 197.232.61.209 at 2023-08-21 00:30:53 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 449)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 1210)
+
+
+Started GET "/" for 197.232.61.209 at 2023-08-21 00:30:55 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 16)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 198)
+
+
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 00:46:02 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumeber"=>"254704412004", "amount"=>"1", "mpesa"=>{"amount"=>"1"}}
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.4ms | Allocations: 22082)
+
+
+  
+NameError (undefined local variable or method `get_access_token' for #<MpesasController:0x00000000020e90>):
+  
+app/controllers/mpesas_controller.rb:25:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 00:48:31 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumeber"=>"254704412004", "amount"=>"1", "mpesa"=>{"amount"=>"1"}}
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.5ms | Allocations: 22084)
+
+
+  
+NameError (undefined local variable or method `get_access_token' for #<MpesasController:0x00000000020e90>):
+  
+app/controllers/mpesas_controller.rb:25:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 00:52:12 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumeber"=>"254704412004", "amount"=>"1", "mpesa"=>{"amount"=>"1"}}
+  [1m[36mAccessToken Load (0.4ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mAccessToken Create (0.5ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-20 21:52:13.943012"], ["updated_at", "2023-08-20 21:52:13.943012"]]
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mTRANSACTION (13.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+Completed 500 Internal Server Error in 1768ms (ActiveRecord: 16.4ms | Allocations: 41747)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"79049-30216643-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:45:in `block in stkpush'
+app/controllers/mpesas_controller.rb:36:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 00:54:37 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumeber"=>"254704412004", "amount"=>"1", "mpesa"=>{"amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.7ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (11.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mAccessToken Create (1.0ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-20 21:54:38.997105"], ["updated_at", "2023-08-20 21:54:38.997105"]]
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+Completed 500 Internal Server Error in 1843ms (ActiveRecord: 27.0ms | Allocations: 42606)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"28699-85303646-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:45:in `block in stkpush'
+app/controllers/mpesas_controller.rb:36:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:03:03 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumeber"=>"254704412004", "amount"=>"1", "mpesa"=>{"amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.3ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (14.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mAccessToken Create (0.3ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-20 22:03:04.361814"], ["updated_at", "2023-08-20 22:03:04.361814"]]
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+Completed 500 Internal Server Error in 2252ms (ActiveRecord: 25.2ms | Allocations: 42548)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"29600-205705721-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:45:in `block in stkpush'
+app/controllers/mpesas_controller.rb:36:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:03:11 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.2ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (18.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mAccessToken Create (0.7ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-20 22:03:12.307128"], ["updated_at", "2023-08-20 22:03:12.307128"]]
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mTRANSACTION (11.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+Completed 500 Internal Server Error in 1607ms (ActiveRecord: 30.6ms | Allocations: 5756)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"23521-153943139-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:45:in `block in stkpush'
+app/controllers/mpesas_controller.rb:36:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:10:02 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.2ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.6ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (12.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-20 22:10:03.853376"], ["updated_at", "2023-08-20 22:10:03.853376"]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (13.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+Completed 500 Internal Server Error in 1972ms (ActiveRecord: 29.8ms | Allocations: 42612)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"32193-86702125-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:91:in `block in stkpush'
+app/controllers/mpesas_controller.rb:82:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:10:57 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.3ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (9.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Create (0.5ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-20 22:10:58.980266"], ["updated_at", "2023-08-20 22:10:58.980266"]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (12.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+Completed 500 Internal Server Error in 1736ms (ActiveRecord: 26.0ms | Allocations: 7181)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"29607-205715201-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:91:in `block in stkpush'
+app/controllers/mpesas_controller.rb:82:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:14:15 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.2ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.3ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (16.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-20 22:14:16.331513"], ["updated_at", "2023-08-20 22:14:16.331513"]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+Completed 500 Internal Server Error in 1854ms (ActiveRecord: 32.0ms | Allocations: 7183)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"93409-13240193-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:91:in `block in stkpush'
+app/controllers/mpesas_controller.rb:82:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:19:15 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.3ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-20 22:19:17.076366"], ["updated_at", "2023-08-20 22:19:17.076366"]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (77.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+Completed 500 Internal Server Error in 2020ms (ActiveRecord: 92.9ms | Allocations: 7170)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"28678-85329905-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:91:in `block in stkpush'
+app/controllers/mpesas_controller.rb:82:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:20:57 +0300
+Processing by MpesasController#stkpush as */*
+  [1m[36mAccessToken Load (0.2ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.7ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-20 22:20:58.627765"], ["updated_at", "2023-08-20 22:20:58.627765"]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (11.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+Completed 500 Internal Server Error in 1798ms (ActiveRecord: 25.0ms | Allocations: 5741)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"28694-85331701-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:91:in `block in stkpush'
+app/controllers/mpesas_controller.rb:82:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:28:13 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.2ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.5ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (14.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-20 22:28:15.494942"], ["updated_at", "2023-08-20 22:28:15.494942"]]
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+Completed 500 Internal Server Error in 2861ms (ActiveRecord: 25.0ms | Allocations: 42608)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"24715-55631770-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:91:in `block in stkpush'
+app/controllers/mpesas_controller.rb:82:in `stkpush'
