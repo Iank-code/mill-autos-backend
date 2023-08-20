@@ -111,7 +111,7 @@ class MpesasController < ApplicationController
         headers = {
         Content_type: 'application/json',
         # Authorization: "Bearer #{ get_access_token }"
-        Authorization: "Bearer msbN8AXkY1CBVvMNt+S1MZCEwrwnCRq6H6K0vUdg3knALXD6B8lR8LbwJq7ucGdapBWkDOBZfOsKQ4jGnBcVn4gEXtQTwbawcjYBLOsnJXCNkKAbCOTbGz71TKAUo6MU7M5V55wyooCarS+k0TR5D4MGwTsA24EL4ZPNDj1QMVlLzezaQ/Pi8TMT8+6En0z71amlpcvmUdQhISjZTOAcfeFJuYPHT8mrqHW4ZyAhBsmRtmXd9DEMGxygd++crG5UhIN+GExckIX9MDrQLBBTmgrHvhpbatwBsON6HWa3euYBQdxyJ7F9y9/AGmsI50vqFB6TLSU/sFBOLyIiV/PkBQ=="
+        Authorization: "Bearer #{ get_access_token }"
         }
 
         response = RestClient::Request.new({
