@@ -481,3 +481,36 @@ Processing by CustomersController#login as */*
 Completed 200 OK in 326ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 37545)
 
 
+Started POST "/customer/login" for 127.0.0.1 at 2023-08-20 00:52:43 +0300
+Processing by CustomersController#login as */*
+  Parameters: {"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "customer"=>{"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004"}}
+[31mUnpermitted parameter: :customer. Context: { controller: CustomersController, action: login, request: #<ActionDispatch::Request:0x00007f82508bf4f0>, params: {"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"customers", "action"=>"login", "customer"=>{"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004"}} }[0m
+[31mUnpermitted parameter: :customer. Context: { controller: CustomersController, action: login, request: #<ActionDispatch::Request:0x00007f82508bf4f0>, params: {"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"customers", "action"=>"login", "customer"=>{"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004"}} }[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (username = 'Ian Kamau') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:16:in `login'
+[31mUnpermitted parameter: :customer. Context: { controller: CustomersController, action: login, request: #<ActionDispatch::Request:0x00007f82508bf4f0>, params: {"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"customers", "action"=>"login", "customer"=>{"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004"}} }[0m
+Completed 200 OK in 295ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1330)
+
+
+Started POST "/customer/login" for 127.0.0.1 at 2023-08-20 00:52:46 +0300
+Processing by CustomersController#login as */*
+  Parameters: {"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "customer"=>{"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004"}}
+[31mUnpermitted parameter: :customer. Context: { controller: CustomersController, action: login, request: #<ActionDispatch::Request:0x00007f8248038258>, params: {"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"customers", "action"=>"login", "customer"=>{"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004"}} }[0m
+[31mUnpermitted parameter: :customer. Context: { controller: CustomersController, action: login, request: #<ActionDispatch::Request:0x00007f8248038258>, params: {"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"customers", "action"=>"login", "customer"=>{"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004"}} }[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (username = 'Ian Kamau') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:16:in `login'
+[31mUnpermitted parameter: :customer. Context: { controller: CustomersController, action: login, request: #<ActionDispatch::Request:0x00007f8248038258>, params: {"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"customers", "action"=>"login", "customer"=>{"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004"}} }[0m
+Completed 200 OK in 292ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1332)
+
+
+Started POST "/customer/login" for 127.0.0.1 at 2023-08-20 00:52:48 +0300
+Processing by CustomersController#login as */*
+  Parameters: {"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "customer"=>{"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004"}}
+[31mUnpermitted parameter: :customer. Context: { controller: CustomersController, action: login, request: #<ActionDispatch::Request:0x00007f8260b37740>, params: {"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"customers", "action"=>"login", "customer"=>{"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004"}} }[0m
+[31mUnpermitted parameter: :customer. Context: { controller: CustomersController, action: login, request: #<ActionDispatch::Request:0x00007f8260b37740>, params: {"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"customers", "action"=>"login", "customer"=>{"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004"}} }[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (username = 'Ian Kamau') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:16:in `login'
+[31mUnpermitted parameter: :customer. Context: { controller: CustomersController, action: login, request: #<ActionDispatch::Request:0x00007f8260b37740>, params: {"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"customers", "action"=>"login", "customer"=>{"username"=>"Ian Kamau", "email"=>"kian99564@gmail.com", "phone_number"=>"0704412004"}} }[0m
+Completed 200 OK in 293ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1328)
+
+
