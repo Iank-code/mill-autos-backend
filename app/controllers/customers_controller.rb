@@ -19,7 +19,9 @@ class CustomersController < ApplicationController
             token = encode(user.id, user.email)
             user_attributes = user.attributes.except("updated_at", "created_at", "password_digest")
 
-            app_response(message: "Login was successful", status: 200, data: {token: token, user: user_attributes})
+            image = get_inage(user.id)
+
+            app_response(message: "Login was successful", status: 200, data: {token: token, user: user_attributes, image: image})
 
         else
             app_response(message: "Authentication failed", status:400)
@@ -30,6 +32,6 @@ class CustomersController < ApplicationController
     # Private methods
     private
     def user_params
-        params.permit(:username, :email, :password, :password_confirmation, :phone_number)
+        params.permit(:username, :email, :password, :password_confirmation, :phone_number, :file)
     end
 end
