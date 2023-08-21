@@ -3231,3 +3231,1663 @@ RuntimeError (Invalid response {
   
 app/controllers/mpesas_controller.rb:91:in `block in stkpush'
 app/controllers/mpesas_controller.rb:82:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:37:54 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mAccessToken Create (0.6ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-20 22:37:55.582166"], ["updated_at", "2023-08-20 22:37:55.582166"]]
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+Completed 500 Internal Server Error in 1634ms (ActiveRecord: 15.3ms | Allocations: 40267)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"11441-71844593-2",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:91:in `block in stkpush'
+app/controllers/mpesas_controller.rb:82:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:38:32 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mAccessToken Create (0.8ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-20 22:38:33.846099"], ["updated_at", "2023-08-20 22:38:33.846099"]]
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mTRANSACTION (13.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+Completed 500 Internal Server Error in 1806ms (ActiveRecord: 16.9ms | Allocations: 5383)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"27250-26899879-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:91:in `block in stkpush'
+app/controllers/mpesas_controller.rb:82:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:39:27 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:190:in `get_access_token'
+  [1m[36mAccessToken Create (0.6ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-20 22:39:28.805111"], ["updated_at", "2023-08-20 22:39:28.805111"]]
+  ↳ app/controllers/mpesas_controller.rb:190:in `get_access_token'
+  [1m[36mTRANSACTION (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:190:in `get_access_token'
+Completed 500 Internal Server Error in 1913ms (ActiveRecord: 16.1ms | Allocations: 5357)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"24722-55644853-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:91:in `block in stkpush'
+app/controllers/mpesas_controller.rb:82:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:40:45 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:192:in `get_access_token'
+  [1m[36mAccessToken Create (0.5ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-20 22:40:47.042963"], ["updated_at", "2023-08-20 22:40:47.042963"]]
+  ↳ app/controllers/mpesas_controller.rb:192:in `get_access_token'
+  [1m[36mTRANSACTION (11.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:192:in `get_access_token'
+Completed 500 Internal Server Error in 1830ms (ActiveRecord: 13.9ms | Allocations: 40275)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"28684-85352549-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:91:in `block in stkpush'
+app/controllers/mpesas_controller.rb:82:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:42:22 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+Completed 500 Internal Server Error in 1019ms (ActiveRecord: 0.8ms | Allocations: 23825)
+
+
+  
+NoMethodError (undefined method `access_token' for "mZQWAK73KRGu8G1j6qQD8jLrL0Sr":String):
+  
+app/controllers/mpesas_controller.rb:192:in `get_access_token'
+app/controllers/mpesas_controller.rb:74:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:44:22 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mAccessToken Create (1.8ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-20 22:44:24.104637"], ["updated_at", "2023-08-20 22:44:24.104637"]]
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mTRANSACTION (15.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+Completed 500 Internal Server Error in 1393ms (ActiveRecord: 19.3ms | Allocations: 40327)
+
+
+  
+NoMethodError (undefined method `access_token' for "zU6TQBWRSIofxx4yeg9hDRvCVKhm":String):
+  
+app/controllers/mpesas_controller.rb:190:in `get_access_token'
+app/controllers/mpesas_controller.rb:74:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:44:59 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+Completed 500 Internal Server Error in 981ms (ActiveRecord: 0.4ms | Allocations: 23769)
+
+
+  
+NoMethodError (undefined method `access_token' for <RestClient::Response 200 "{\n         ...">:RestClient::Response):
+  
+app/controllers/mpesas_controller.rb:179:in `get_access_token'
+app/controllers/mpesas_controller.rb:74:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:46:52 +0300
+  
+SyntaxError (/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:123: syntax error, unexpected local variable or method, expecting `when'
+            puts "#response #{response}"
+            ^~~~
+/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:124: syntax error, unexpected `when', expecting `end'
+        when 500
+        ^~~~
+/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:126: syntax error, unexpected `when', expecting `end'
+        when 400
+        ^~~~
+/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:128: syntax error, unexpected `when', expecting `end'
+        when 200
+        ^~~~
+/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:130: else without rescue is useless
+        else
+        ^~~~
+/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:135: syntax error, unexpected `end', expecting end-of-input
+    end
+    ^~~
+):
+  
+app/controllers/mpesas_controller.rb:123: syntax error, unexpected local variable or method, expecting `when'
+app/controllers/mpesas_controller.rb:124: syntax error, unexpected `when', expecting `end'
+app/controllers/mpesas_controller.rb:126: syntax error, unexpected `when', expecting `end'
+app/controllers/mpesas_controller.rb:128: syntax error, unexpected `when', expecting `end'
+app/controllers/mpesas_controller.rb:130: else without rescue is useless
+app/controllers/mpesas_controller.rb:135: syntax error, unexpected `end', expecting end-of-input
+app/controllers/mpesas_controller.rb:123: syntax error, unexpected local variable or method, expecting `when'
+app/controllers/mpesas_controller.rb:124: syntax error, unexpected `when', expecting `end'
+app/controllers/mpesas_controller.rb:126: syntax error, unexpected `when', expecting `end'
+app/controllers/mpesas_controller.rb:128: syntax error, unexpected `when', expecting `end'
+app/controllers/mpesas_controller.rb:130: else without rescue is useless
+app/controllers/mpesas_controller.rb:135: syntax error, unexpected `end', expecting end-of-input
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:47:31 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (30.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (14.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.5ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (11.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (11.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 14]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.3ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 15]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (16.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mAccessToken Create (0.5ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-20 22:47:32.668060"], ["updated_at", "2023-08-20 22:47:32.668060"]]
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mTRANSACTION (19.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+Completed 500 Internal Server Error in 1556ms (ActiveRecord: 122.9ms | Allocations: 28128)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"11434-71855979-2",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:91:in `block in stkpush'
+app/controllers/mpesas_controller.rb:82:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:48:31 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.5ms | Allocations: 22121)
+
+
+  
+NameError (undefined local variable or method `generate_access_token' for #<MpesasController:0x00000000020f30>
+Did you mean?  get_access_token):
+  
+app/controllers/mpesas_controller.rb:178:in `get_access_token'
+app/controllers/mpesas_controller.rb:74:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:49:01 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 16]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (13.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mAccessToken Create (1.1ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-20 22:49:03.733272"], ["updated_at", "2023-08-20 22:49:03.733272"]]
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mTRANSACTION (13.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+Completed 500 Internal Server Error in 2773ms (ActiveRecord: 31.5ms | Allocations: 43561)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"32195-86744856-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:91:in `block in stkpush'
+app/controllers/mpesas_controller.rb:82:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:49:53 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Destroy (1.0ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 17]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (8.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mAccessToken Create (7.8ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-20 22:49:55.483885"], ["updated_at", "2023-08-20 22:49:55.483885"]]
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mTRANSACTION (8.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+Completed 500 Internal Server Error in 2376ms (ActiveRecord: 28.5ms | Allocations: 8181)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"32177-86745797-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:91:in `block in stkpush'
+app/controllers/mpesas_controller.rb:82:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:50:33 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-20 22:50:35.640674"], ["updated_at", "2023-08-20 22:50:35.640674"]]
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+Completed 500 Internal Server Error in 2493ms (ActiveRecord: 11.9ms | Allocations: 6339)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"26307-34163362-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:91:in `block in stkpush'
+app/controllers/mpesas_controller.rb:82:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:51:19 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.2ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 18]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (13.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 19]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (9.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-20 22:51:21.216545"], ["updated_at", "2023-08-20 22:51:21.216545"]]
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mTRANSACTION (13.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+Completed 500 Internal Server Error in 2477ms (ActiveRecord: 40.4ms | Allocations: 9465)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"27266-26914903-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:91:in `block in stkpush'
+app/controllers/mpesas_controller.rb:82:in `stkpush'
+Started POST "/stkpush" for 197.232.61.209 at 2023-08-21 01:52:23 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.4ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.8ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 20]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (13.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mAccessToken Create (0.3ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-20 22:52:24.906254"], ["updated_at", "2023-08-20 22:52:24.906254"]]
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mTRANSACTION (10.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+Completed 500 Internal Server Error in 1781ms (ActiveRecord: 26.3ms | Allocations: 42604)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"79057-30286167-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:91:in `block in stkpush'
+app/controllers/mpesas_controller.rb:82:in `stkpush'
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 12:18:26 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.2ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mAccessToken Destroy (1.2ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 21]]
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 09:18:27.739556"], ["updated_at", "2023-08-21 09:18:27.739556"]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+Completed 500 Internal Server Error in 2547ms (ActiveRecord: 19.6ms | Allocations: 42612)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"26319-35164512-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:91:in `block in stkpush'
+app/controllers/mpesas_controller.rb:82:in `stkpush'
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 12:20:44 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 22]]
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (7.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Create (0.5ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 09:20:47.526249"], ["updated_at", "2023-08-21 09:20:47.526249"]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+Completed 500 Internal Server Error in 3978ms (ActiveRecord: 18.1ms | Allocations: 5714)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"8349-142498729-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:91:in `block in stkpush'
+app/controllers/mpesas_controller.rb:82:in `stkpush'
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 12:31:40 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.1ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.3ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 23]]
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:187:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Create (0.3ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 09:31:41.831125"], ["updated_at", "2023-08-21 09:31:41.831125"]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+Completed 500 Internal Server Error in 1935ms (ActiveRecord: 15.5ms | Allocations: 5843)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"8351-142535768-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:91:in `block in stkpush'
+app/controllers/mpesas_controller.rb:82:in `stkpush'
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 12:34:54 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.2ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 24]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 09:34:55.269990"], ["updated_at", "2023-08-21 09:34:55.269990"]]
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+Completed 500 Internal Server Error in 1140ms (ActiveRecord: 17.0ms | Allocations: 6065)
+
+
+  
+URI::InvalidURIError (bad URI(is not URI?): "http:// https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest"):
+  
+app/controllers/mpesas_controller.rb:78:in `new'
+app/controllers/mpesas_controller.rb:78:in `stkpush'
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 12:35:28 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.2ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.5ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 25]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 09:35:29.200274"], ["updated_at", "2023-08-21 09:35:29.200274"]]
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mTRANSACTION (7.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+Completed 500 Internal Server Error in 1033ms (ActiveRecord: 18.4ms | Allocations: 6066)
+
+
+  
+URI::InvalidURIError (bad URI(is not URI?): "http:// https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest"):
+  
+app/controllers/mpesas_controller.rb:78:in `new'
+app/controllers/mpesas_controller.rb:78:in `stkpush'
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 12:35:48 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.4ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Destroy (1.1ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 26]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mAccessToken Create (0.5ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 09:35:50.049886"], ["updated_at", "2023-08-21 09:35:50.049886"]]
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mTRANSACTION (9.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+Completed 500 Internal Server Error in 2133ms (ActiveRecord: 19.8ms | Allocations: 7127)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"8341-142549423-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:92:in `block in stkpush'
+app/controllers/mpesas_controller.rb:83:in `stkpush'
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 12:39:32 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:224: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/mpesas_controller.rb:224: syntax error, unexpected `end', expecting end-of-input
+app/controllers/mpesas_controller.rb:224: syntax error, unexpected `end', expecting end-of-input
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 12:40:06 +0300
+  
+NameError (undefined local variable or method `​' for MpesasController:Class):
+  
+app/controllers/mpesas_controller.rb:32:in `<class:MpesasController>'
+app/controllers/mpesas_controller.rb:1:in `<main>'
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 12:40:35 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.1ms | Allocations: 21148)
+
+
+  
+NameError (undefined local variable or method `​' for #<MpesasController:0x000000000299f0>):
+  
+app/controllers/mpesas_controller.rb:7:in `stkpush'
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 12:43:56 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 27]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 09:43:57.690347"], ["updated_at", "2023-08-21 09:43:57.690347"]]
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+Completed 200 OK in 1529ms (Views: 0.8ms | ActiveRecord: 17.7ms | Allocations: 22656)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 12:44:20 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.3ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 28]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mAccessToken Create (0.6ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 09:44:21.844726"], ["updated_at", "2023-08-21 09:44:21.844726"]]
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mTRANSACTION (8.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+Completed 200 OK in 1452ms (Views: 1.0ms | ActiveRecord: 21.0ms | Allocations: 7151)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 12:48:25 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.6ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 29]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mAccessToken Create (0.3ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 09:48:26.174107"], ["updated_at", "2023-08-21 09:48:26.174107"]]
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mTRANSACTION (9.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+Completed 200 OK in 1860ms (Views: 0.5ms | ActiveRecord: 19.8ms | Allocations: 7146)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 12:52:27 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.6ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 30]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mAccessToken Create (0.3ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 09:52:29.746800"], ["updated_at", "2023-08-21 09:52:29.746800"]]
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+Completed 200 OK in 3067ms (Views: 0.2ms | ActiveRecord: 17.6ms | Allocations: 7200)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 12:55:24 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.2ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mAccessToken Destroy (1.3ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 31]]
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (8.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:188:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mAccessToken Create (0.7ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 09:55:25.907624"], ["updated_at", "2023-08-21 09:55:25.907624"]]
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:189:in `get_access_token'
+Completed 200 OK in 1974ms (Views: 0.6ms | ActiveRecord: 19.6ms | Allocations: 7077)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 12:56:22 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.2ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.5ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 32]]
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 09:56:23.193591"], ["updated_at", "2023-08-21 09:56:23.193591"]]
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+Completed 200 OK in 1992ms (Views: 0.3ms | ActiveRecord: 16.4ms | Allocations: 7133)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 12:57:33 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.2ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.3ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 33]]
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mAccessToken Create (0.3ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 09:57:35.239043"], ["updated_at", "2023-08-21 09:57:35.239043"]]
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+Completed 200 OK in 1789ms (Views: 0.6ms | ActiveRecord: 16.4ms | Allocations: 7095)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:02:32 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.2ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.8ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 34]]
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mAccessToken Create (0.3ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:02:33.631994"], ["updated_at", "2023-08-21 10:02:33.631994"]]
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+Completed 200 OK in 2297ms (Views: 0.3ms | ActiveRecord: 17.9ms | Allocations: 7089)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:02:58 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.4ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 35]]
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:02:59.793578"], ["updated_at", "2023-08-21 10:02:59.793578"]]
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+Completed 200 OK in 1617ms (Views: 0.3ms | ActiveRecord: 17.6ms | Allocations: 42654)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:07:54 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.2ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mAccessToken Destroy (1.0ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 36]]
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mAccessToken Create (0.5ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:07:55.182524"], ["updated_at", "2023-08-21 10:07:55.182524"]]
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+Completed 200 OK in 1986ms (Views: 0.3ms | ActiveRecord: 21.0ms | Allocations: 7201)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:13:15 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.4ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 37]]
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mAccessToken Create (0.3ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:13:16.513492"], ["updated_at", "2023-08-21 10:13:16.513492"]]
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+Completed 200 OK in 2677ms (Views: 0.5ms | ActiveRecord: 14.8ms | Allocations: 6782)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:14:05 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.2ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.6ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 38]]
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (8.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:14:06.993938"], ["updated_at", "2023-08-21 10:14:06.993938"]]
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+Completed 200 OK in 1942ms (Views: 0.4ms | ActiveRecord: 18.0ms | Allocations: 5640)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:14:55 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.3ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 39]]
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (8.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mAccessToken Create (0.5ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:14:56.460851"], ["updated_at", "2023-08-21 10:14:56.460851"]]
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mTRANSACTION (16.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+Completed 200 OK in 1985ms (Views: 0.4ms | ActiveRecord: 28.4ms | Allocations: 7104)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:17:05 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.4ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.6ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 40]]
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mAccessToken Create (0.3ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:17:07.539544"], ["updated_at", "2023-08-21 10:17:07.539544"]]
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+Completed 200 OK in 2694ms (Views: 0.3ms | ActiveRecord: 19.0ms | Allocations: 7123)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:19:02 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.5ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 41]]
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:19:04.066372"], ["updated_at", "2023-08-21 10:19:04.066372"]]
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+Completed 200 OK in 2852ms (Views: 0.5ms | ActiveRecord: 17.8ms | Allocations: 7113)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:19:13 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.2ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.7ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 42]]
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:19:14.201325"], ["updated_at", "2023-08-21 10:19:14.201325"]]
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+Completed 200 OK in 1425ms (Views: 0.4ms | ActiveRecord: 16.1ms | Allocations: 5675)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:23:21 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 43]]
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (7.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:23:22.781992"], ["updated_at", "2023-08-21 10:23:22.781992"]]
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+Completed 200 OK in 1629ms (Views: 0.3ms | ActiveRecord: 17.8ms | Allocations: 42581)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:24:13 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 44]]
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:24:15.186514"], ["updated_at", "2023-08-21 10:24:15.186514"]]
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:142:in `get_access_token'
+Completed 200 OK in 2293ms (Views: 0.3ms | ActiveRecord: 17.5ms | Allocations: 7127)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:24:48 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:140:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:140:in `get_access_token'
+  [1m[36mAccessToken Destroy (1.3ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 45]]
+  ↳ app/controllers/mpesas_controller.rb:140:in `get_access_token'
+  [1m[36mTRANSACTION (13.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:140:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mAccessToken Create (0.3ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:24:49.823252"], ["updated_at", "2023-08-21 10:24:49.823252"]]
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:141:in `get_access_token'
+Completed 200 OK in 1611ms (Views: 0.3ms | ActiveRecord: 25.3ms | Allocations: 7207)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:31:42 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.2ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:126:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:126:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 46]]
+  ↳ app/controllers/mpesas_controller.rb:126:in `get_access_token'
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:126:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:127:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:31:43.394397"], ["updated_at", "2023-08-21 10:31:43.394397"]]
+  ↳ app/controllers/mpesas_controller.rb:127:in `get_access_token'
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:127:in `get_access_token'
+Completed 200 OK in 3998ms (Views: 0.3ms | ActiveRecord: 16.5ms | Allocations: 6796)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:35:53 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.2ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:113:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:113:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.3ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 47]]
+  ↳ app/controllers/mpesas_controller.rb:113:in `get_access_token'
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:113:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:114:in `get_access_token'
+  [1m[36mAccessToken Create (0.7ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:35:54.282445"], ["updated_at", "2023-08-21 10:35:54.282445"]]
+  ↳ app/controllers/mpesas_controller.rb:114:in `get_access_token'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:114:in `get_access_token'
+Completed 200 OK in 2071ms (Views: 1.2ms | ActiveRecord: 18.0ms | Allocations: 7131)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:40:12 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.6ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:113:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:113:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 48]]
+  ↳ app/controllers/mpesas_controller.rb:113:in `get_access_token'
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:113:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:114:in `get_access_token'
+  [1m[36mAccessToken Create (0.5ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:40:13.977081"], ["updated_at", "2023-08-21 10:40:13.977081"]]
+  ↳ app/controllers/mpesas_controller.rb:114:in `get_access_token'
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:114:in `get_access_token'
+Completed 200 OK in 2586ms (Views: 0.8ms | ActiveRecord: 17.6ms | Allocations: 7096)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:40:24 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.2ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:113:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:113:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 49]]
+  ↳ app/controllers/mpesas_controller.rb:113:in `get_access_token'
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:113:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:114:in `get_access_token'
+  [1m[36mAccessToken Create (0.5ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:40:27.078227"], ["updated_at", "2023-08-21 10:40:27.078227"]]
+  ↳ app/controllers/mpesas_controller.rb:114:in `get_access_token'
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:114:in `get_access_token'
+Completed 200 OK in 2962ms (Views: 0.9ms | ActiveRecord: 15.2ms | Allocations: 5718)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:40:46 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:114:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:114:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 50]]
+  ↳ app/controllers/mpesas_controller.rb:114:in `get_access_token'
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:114:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mAccessToken Create (0.8ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:40:47.676980"], ["updated_at", "2023-08-21 10:40:47.676980"]]
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+Completed 200 OK in 2927ms (Views: 0.5ms | ActiveRecord: 20.0ms | Allocations: 7193)
+
+
+Started POST "/stkquery" for 197.232.61.237 at 2023-08-21 13:41:25 +0300
+Processing by MpesasController#stkquery as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:114:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:114:in `get_access_token'
+  [1m[36mAccessToken Destroy (1.6ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 51]]
+  ↳ app/controllers/mpesas_controller.rb:114:in `get_access_token'
+  [1m[36mTRANSACTION (13.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:114:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mAccessToken Create (1.9ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:41:26.283443"], ["updated_at", "2023-08-21 10:41:26.283443"]]
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mTRANSACTION (11.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+Completed 200 OK in 1716ms (Views: 0.3ms | ActiveRecord: 28.0ms | Allocations: 5544)
+
+
+Started POST "/stkquery" for 197.232.61.237 at 2023-08-21 13:41:53 +0300
+Processing by MpesasController#stkquery as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.2ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.3ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 52]]
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mTRANSACTION (8.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mAccessToken Create (0.5ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:41:54.947235"], ["updated_at", "2023-08-21 10:41:54.947235"]]
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+Completed 200 OK in 2022ms (Views: 0.6ms | ActiveRecord: 19.5ms | Allocations: 7049)
+
+
+Started POST "/stkquery" for 197.232.61.237 at 2023-08-21 13:42:10 +0300
+  
+SyntaxError (/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:50: syntax error, unexpected '\n', expecting =>
+/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:123: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/mpesas_controller.rb:50: syntax error, unexpected '\n', expecting =>
+app/controllers/mpesas_controller.rb:123: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/mpesas_controller.rb:50: syntax error, unexpected '\n', expecting =>
+app/controllers/mpesas_controller.rb:123: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/stkquery" for 197.232.61.237 at 2023-08-21 13:42:35 +0300
+  
+SyntaxError (/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:50: syntax error, unexpected ',', expecting =>
+        render json: {response, business_short_code},
+                              ^
+/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:123: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/mpesas_controller.rb:50: syntax error, unexpected ',', expecting =>
+app/controllers/mpesas_controller.rb:123: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/mpesas_controller.rb:50: syntax error, unexpected ',', expecting =>
+app/controllers/mpesas_controller.rb:123: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/stkquery" for 197.232.61.237 at 2023-08-21 13:42:52 +0300
+  
+SyntaxError (/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:51: syntax error, unexpected `end'
+    end
+    ^~~
+/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:123: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/mpesas_controller.rb:51: syntax error, unexpected `end'
+app/controllers/mpesas_controller.rb:123: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/mpesas_controller.rb:51: syntax error, unexpected `end'
+app/controllers/mpesas_controller.rb:123: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/stkquery" for 197.232.61.237 at 2023-08-21 13:43:10 +0300
+  
+SyntaxError (/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:52: syntax error, unexpected `end'
+    end
+    ^~~
+/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:124: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/mpesas_controller.rb:52: syntax error, unexpected `end'
+app/controllers/mpesas_controller.rb:124: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/mpesas_controller.rb:52: syntax error, unexpected `end'
+app/controllers/mpesas_controller.rb:124: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/stkquery" for 197.232.61.237 at 2023-08-21 13:43:31 +0300
+  
+SyntaxError (/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:52: syntax error, unexpected `end'
+    end
+    ^~~
+/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:124: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/mpesas_controller.rb:52: syntax error, unexpected `end'
+app/controllers/mpesas_controller.rb:124: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/mpesas_controller.rb:52: syntax error, unexpected `end'
+app/controllers/mpesas_controller.rb:124: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:43:54 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:52: syntax error, unexpected `end'
+    end
+    ^~~
+/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:124: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/mpesas_controller.rb:52: syntax error, unexpected `end'
+app/controllers/mpesas_controller.rb:124: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/mpesas_controller.rb:52: syntax error, unexpected `end'
+app/controllers/mpesas_controller.rb:124: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:44:13 +0300
+  
+SyntaxError (/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:51: syntax error, unexpected `end'
+    end
+    ^~~
+/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:123: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/mpesas_controller.rb:51: syntax error, unexpected `end'
+app/controllers/mpesas_controller.rb:123: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/mpesas_controller.rb:51: syntax error, unexpected `end'
+app/controllers/mpesas_controller.rb:123: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:44:29 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"+254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"+254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.4ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mAccessToken Destroy (1.5ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 53]]
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mAccessToken Create (0.7ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:44:31.138320"], ["updated_at", "2023-08-21 10:44:31.138320"]]
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+Completed 200 OK in 1961ms (Views: 0.5ms | ActiveRecord: 20.2ms | Allocations: 42605)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:44:46 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"+254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"+254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 54]]
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:44:46.890352"], ["updated_at", "2023-08-21 10:44:46.890352"]]
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (8.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+Completed 200 OK in 1667ms (Views: 0.2ms | ActiveRecord: 27.2ms | Allocations: 7100)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:44:56 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"+254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"+254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.7ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 55]]
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mTRANSACTION (9.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mAccessToken Create (0.6ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:44:57.480996"], ["updated_at", "2023-08-21 10:44:57.480996"]]
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+Completed 200 OK in 2039ms (Views: 0.2ms | ActiveRecord: 18.8ms | Allocations: 5665)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:45:55 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"+254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"+254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.4ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mAccessToken Destroy (1.1ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 56]]
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mAccessToken Create (0.3ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:45:57.154326"], ["updated_at", "2023-08-21 10:45:57.154326"]]
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+Completed 200 OK in 2099ms (Views: 0.3ms | ActiveRecord: 18.5ms | Allocations: 42552)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:47:40 +0300
+  
+SyntaxError (/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:51: syntax error, unexpected `end'
+    end
+    ^~~
+/home/mose/Videos/videos/Mill Auto/mill-autos-backend/app/controllers/mpesas_controller.rb:123: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/mpesas_controller.rb:51: syntax error, unexpected `end'
+app/controllers/mpesas_controller.rb:123: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/mpesas_controller.rb:51: syntax error, unexpected `end'
+app/controllers/mpesas_controller.rb:123: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 13:47:51 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"+254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"+254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.4ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 57]]
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:115:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mAccessToken Create (0.5ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 10:47:52.747045"], ["updated_at", "2023-08-21 10:47:52.747045"]]
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+Completed 200 OK in 1782ms (Views: 0.4ms | ActiveRecord: 19.4ms | Allocations: 7138)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 14:16:26 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"+254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"+254704412004", "amount"=>"1"}}
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.5ms | Allocations: 21975)
+
+
+  
+NameError (undefined local variable or method `phone_number' for #<MpesasController:0x00000000020f08>):
+  
+app/controllers/mpesas_controller.rb:66:in `stkpush'
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 14:17:06 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"+254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"+254704412004", "amount"=>"1"}}
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.1ms | Allocations: 2111)
+
+
+  
+NameError (undefined local variable or method `phone_number' for #<MpesasController:0x00000000025648>
+Did you mean?  phoneNumber):
+  
+app/controllers/mpesas_controller.rb:67:in `stkpush'
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 14:17:24 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"+254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"+254704412004", "amount"=>"1"}}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.8ms | Allocations: 2109)
+
+
+  
+NameError (undefined local variable or method `phone_number' for #<MpesasController:0x00000000029b30>
+Did you mean?  phoneNumber):
+  
+app/controllers/mpesas_controller.rb:67:in `stkpush'
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 14:17:56 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"+254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"+254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:157:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:157:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 58]]
+  ↳ app/controllers/mpesas_controller.rb:157:in `get_access_token'
+  [1m[36mTRANSACTION (10.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:157:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:158:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 11:17:59.302438"], ["updated_at", "2023-08-21 11:17:59.302438"]]
+  ↳ app/controllers/mpesas_controller.rb:158:in `get_access_token'
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:158:in `get_access_token'
+Completed 204 No Content in 3658ms (ActiveRecord: 21.5ms | Allocations: 22644)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 14:18:49 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"+254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"+254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:158:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:158:in `get_access_token'
+  [1m[36mAccessToken Destroy (1.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 59]]
+  ↳ app/controllers/mpesas_controller.rb:158:in `get_access_token'
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:158:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:159:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 11:18:51.090546"], ["updated_at", "2023-08-21 11:18:51.090546"]]
+  ↳ app/controllers/mpesas_controller.rb:159:in `get_access_token'
+  [1m[36mTRANSACTION (9.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:159:in `get_access_token'
+Completed 204 No Content in 1883ms (ActiveRecord: 21.0ms | Allocations: 7060)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 14:19:44 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"+254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"+254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.4ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:159:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:159:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.3ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 60]]
+  ↳ app/controllers/mpesas_controller.rb:159:in `get_access_token'
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:159:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:160:in `get_access_token'
+  [1m[36mAccessToken Create (0.3ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 11:19:45.485059"], ["updated_at", "2023-08-21 11:19:45.485059"]]
+  ↳ app/controllers/mpesas_controller.rb:160:in `get_access_token'
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:160:in `get_access_token'
+Completed 204 No Content in 2240ms (ActiveRecord: 18.4ms | Allocations: 7110)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 14:31:18 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"+254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"+254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:159:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:159:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.8ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 61]]
+  ↳ app/controllers/mpesas_controller.rb:159:in `get_access_token'
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:159:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:160:in `get_access_token'
+  [1m[36mAccessToken Create (0.8ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 11:31:19.257406"], ["updated_at", "2023-08-21 11:31:19.257406"]]
+  ↳ app/controllers/mpesas_controller.rb:160:in `get_access_token'
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:160:in `get_access_token'
+Completed 500 Internal Server Error in 2251ms (ActiveRecord: 18.1ms | Allocations: 6883)
+
+
+  
+RestClient::BadRequest (400 Bad Request):
+  
+app/controllers/mpesas_controller.rb:81:in `stkpush'
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 14:31:56 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"+254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"+254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 62]]
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (7.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mAccessToken Create (0.3ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 11:31:59.063597"], ["updated_at", "2023-08-21 11:31:59.063597"]]
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mTRANSACTION (7.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+Completed 200 OK in 3515ms (Views: 0.4ms | ActiveRecord: 18.7ms | Allocations: 7175)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 14:35:26 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"+254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"+254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.3ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 63]]
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (15.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mAccessToken Create (0.8ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 11:35:27.366557"], ["updated_at", "2023-08-21 11:35:27.366557"]]
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+Completed 200 OK in 1752ms (Views: 0.4ms | ActiveRecord: 26.7ms | Allocations: 7167)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 14:35:51 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"+254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"+254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 64]]
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mAccessToken Create (0.7ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 11:35:52.607365"], ["updated_at", "2023-08-21 11:35:52.607365"]]
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+Completed 500 Internal Server Error in 3482ms (ActiveRecord: 20.1ms | Allocations: 7089)
+
+
+  
+RuntimeError (Invalid response {
+                    "requestId":"24714-57099795-1",
+                    "errorCode": "404.001.03",
+                    "errorMessage": "Invalid Access Token"
+                }
+             received.):
+  
+app/controllers/mpesas_controller.rb:46:in `block in stkpush'
+app/controllers/mpesas_controller.rb:37:in `stkpush'
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 14:36:17 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"+254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"+254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 65]]
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (8.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 11:36:18.829662"], ["updated_at", "2023-08-21 11:36:18.829662"]]
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+Completed 200 OK in 1881ms (Views: 0.3ms | ActiveRecord: 18.2ms | Allocations: 7124)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 14:42:39 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"+254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"+254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.5ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 66]]
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mAccessToken Create (0.5ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 11:42:40.648692"], ["updated_at", "2023-08-21 11:42:40.648692"]]
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mTRANSACTION (7.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+Completed 200 OK in 2393ms (Views: 0.7ms | ActiveRecord: 16.3ms | Allocations: 6757)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 14:42:52 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"+254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"+254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.4ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mAccessToken Destroy (1.1ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 67]]
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mAccessToken Create (0.5ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 11:42:53.448105"], ["updated_at", "2023-08-21 11:42:53.448105"]]
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+Completed 200 OK in 1944ms (Views: 0.5ms | ActiveRecord: 17.9ms | Allocations: 7119)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 14:44:03 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"+254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"+254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.3ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.4ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 68]]
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 11:44:04.306426"], ["updated_at", "2023-08-21 11:44:04.306426"]]
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+Completed 200 OK in 1866ms (Views: 0.3ms | ActiveRecord: 18.8ms | Allocations: 7052)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 14:48:21 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"+254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"+254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.2ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.6ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 69]]
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mAccessToken Create (0.5ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 11:48:23.183174"], ["updated_at", "2023-08-21 11:48:23.183174"]]
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+Completed 200 OK in 2906ms (Views: 0.5ms | ActiveRecord: 20.0ms | Allocations: 7064)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 14:48:27 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.7ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.6ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 70]]
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 11:48:28.316043"], ["updated_at", "2023-08-21 11:48:28.316043"]]
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+Completed 200 OK in 1630ms (Views: 0.4ms | ActiveRecord: 17.1ms | Allocations: 5670)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 14:49:13 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.4ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.3ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 71]]
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mAccessToken Create (0.3ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 11:49:14.381097"], ["updated_at", "2023-08-21 11:49:14.381097"]]
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+Completed 200 OK in 1956ms (Views: 0.3ms | ActiveRecord: 20.0ms | Allocations: 7119)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 14:55:31 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.5ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.5ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 72]]
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mAccessToken Create (0.5ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 11:55:32.655324"], ["updated_at", "2023-08-21 11:55:32.655324"]]
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+Completed 200 OK in 1843ms (Views: 0.5ms | ActiveRecord: 18.5ms | Allocations: 6858)
+
+
+Started POST "/stkpush" for 197.232.61.237 at 2023-08-21 14:55:52 +0300
+Processing by MpesasController#stkpush as */*
+  Parameters: {"phoneNumber"=>"254704412004", "amount"=>"1", "mpesa"=>{"phoneNumber"=>"254704412004", "amount"=>"1"}}
+  [1m[36mAccessToken Load (0.2ms)[0m  [1m[34mSELECT "access_tokens".* FROM "access_tokens"[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mAccessToken Destroy (0.3ms)[0m  [1m[31mDELETE FROM "access_tokens" WHERE "access_tokens"."id" = ?[0m  [["id", 73]]
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:116:in `get_access_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mAccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["token", "[FILTERED]"], ["created_at", "2023-08-21 11:55:53.250896"], ["updated_at", "2023-08-21 11:55:53.250896"]]
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mpesas_controller.rb:117:in `get_access_token'
+Completed 200 OK in 1691ms (Views: 0.4ms | ActiveRecord: 15.1ms | Allocations: 5652)
+
+
