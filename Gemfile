@@ -52,3 +52,4 @@ end
   gem 'image_processing', '~> 1.12', '>= 1.12.2'
 
   gem 'rest-client'
+  gem 'mail'

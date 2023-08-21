@@ -3,6 +3,9 @@ class CustomersController < ApplicationController
     def register
         user = Customer.create(user_params)
         if user.valid?
+            # Send email if user is created successfully
+            UserMailer.with(user: user).welcome_email(user.email).deliver_now
+
             user_attributes = user.attributes.except("updated_at", "created_at", "password_digest")
 
             app_response(message: "User created successfully", status: :created, data: {user: user_attributes})
