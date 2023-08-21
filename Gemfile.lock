@@ -197,6 +197,7 @@ DEPENDENCIES
   dotenv-rails
   image_processing (~> 1.12, >= 1.12.2)
   jwt (~> 2.7, >= 2.7.1)
+  mail
   puma (~> 5.0)
   rack-cors
   rails (~> 7.0.6)
