@@ -4,7 +4,7 @@ class CustomersController < ApplicationController
         user = Customer.create(user_params)
         if user.valid?
             # Send email if user is created successfully
-            UserMailer.with(user: user).welcome_email.deliver_now
+            UserMailer.with(user: user).welcome_email(user.email).deliver_now
 
             user_attributes = user.attributes.except("updated_at", "created_at", "password_digest")
 
