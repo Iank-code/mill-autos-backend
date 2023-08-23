@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::API
+    require 'jwt'
     def app_response(message:"success", status: 200, data: nil)
         render json:{
             message: message,
@@ -21,7 +22,7 @@ class ApplicationController < ActionController::API
                 uid: uid,
                 email: email
             },
-            exp: Time.now.to_i + (6 * 3600)
+            exp: Time.now.to_i + (2 * 60)
         }
 
         JWT.encode(payload, ENV["JWT_PASS"], "HS256")
@@ -42,14 +43,12 @@ class ApplicationController < ActionController::API
                 info: "Your request was not authorized"
             })
         else
-            token = auth_header.split(" ").first
+            token = auth_header.split(" ")
+            jwt_token = token[1]
+            
+            decode_token = decode(jwt_token)
             current_time = Time.now.to_i
-
-            return current_time > token
-        # rescue JWT::ExpiredSignature
-        #     return true
-        # rescue JWT::DecodeError, JWT::VerificationError
-        #     return false
+            app_response(message: "JWT found", data: decode_token)
         end
     end
 end
