@@ -31,6 +31,11 @@ class CustomersController < ApplicationController
         end
     end
 
+    # testing jwt code
+    def test_token
+        verify_auth
+    end
+
 
     # Private methods
     private

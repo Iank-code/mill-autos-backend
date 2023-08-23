@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   post '/customer/register', to:'customers#register'
   post '/customer/login', to:'customers#login'
 
+  # Testing JWT token
+  post "/customer/login/test", to: "customers#test_token"
+
   # Loggin in for admin
   post '/admin/login', to:'admins#login'
 
