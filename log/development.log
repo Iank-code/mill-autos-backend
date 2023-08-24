@@ -11794,3 +11794,451 @@ Processing by CustomersController#login as */*
 Completed 200 OK in 352ms (Views: 1.8ms | ActiveRecord: 1.7ms | Allocations: 11366)
 
 
+Started POST "/customer/login" for 127.0.0.1 at 2023-08-25 00:40:42 +0300
+Processing by CustomersController#login as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f86155eeac8 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-jkxdln.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (username = 'ian') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:20:in `login'
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `get_image'
+Completed 200 OK in 325ms (Views: 0.3ms | ActiveRecord: 2.8ms | Allocations: 16565)
+
+
+Started POST "/customer/forgot_password" for 127.0.0.1 at 2023-08-25 00:40:50 +0300
+Processing by CustomersController#forgot_password_step_1 as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f860c7c6f70 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-xju2yc.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (email = 'ceoian848@gmail.com') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21:in `if_customer_exists'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers_controller.rb:42:in `forgot_password_step_1'
+  [1m[36mCustomer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = ? AND "customers"."id" != ? LIMIT ?[0m  [["email", "ceoian848@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:42:in `forgot_password_step_1'
+  [1m[36mCustomer Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."password_reset_token" = ? AND "customers"."id" != ? LIMIT ?[0m  [["password_reset_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:42:in `forgot_password_step_1'
+  [1m[36mCustomer Update (0.3ms)[0m  [1m[33mUPDATE "customers" SET "password_reset_token" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["password_reset_token", "[FILTERED]"], ["updated_at", "2023-08-24 21:40:50.079599"], ["id", 1]]
+  ↳ app/controllers/customers_controller.rb:42:in `forgot_password_step_1'
+  [1m[36mTRANSACTION (13.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers_controller.rb:42:in `forgot_password_step_1'
+  Rendering layout layouts/mailer.html.erb
+  Rendering forgot_mailer/forgot_email.html.erb within layouts/mailer
+  Rendered forgot_mailer/forgot_email.html.erb within layouts/mailer (Duration: 1.6ms | Allocations: 8)
+  Rendered layout layouts/mailer.html.erb (Duration: 2.5ms | Allocations: 83)
+ForgotMailer#forgot_email: processed outbound mail in 6.7ms
+Delivered mail 64e7ce621b192_11b99e1dc-1d8@mose-pc.mail (3571.2ms)
+Date: Fri, 25 Aug 2023 00:40:50 +0300
+From: kian99564@gmail.com
+To: ceoian848@gmail.com
+Message-ID: <64e7ce621b192_11b99e1dc-1d8@mose-pc.mail>
+Subject: Forgot Password
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi there,</h1>
+    <p>
+      We have recieved a request to change the password,
+    </p>
+
+    <br>
+
+    <p>Use the verification code sent to change your password</p>
+    <p>
+      ba9d2f
+    </p>
+    <p>If this is not you, please ignore this</p>
+  </body>
+</html>
+  </body>
+</html>
+
+Completed 200 OK in 3619ms (Views: 0.5ms | ActiveRecord: 14.9ms | Allocations: 10076)
+
+
+Started POST "/customer/login" for 127.0.0.1 at 2023-08-25 00:41:15 +0300
+Processing by CustomersController#login as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f862001b438 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-1m0rmye.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (username = 'ian') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:20:in `login'
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `get_image'
+Completed 200 OK in 331ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 1609)
+
+
+Started POST "/customer/login" for 127.0.0.1 at 2023-08-25 00:42:26 +0300
+Processing by CustomersController#login as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f8624f6c870 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-m5hhgs.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (email = 'ceoian848@gmail.com') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21:in `if_customer_exists'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `get_image'
+Completed 200 OK in 339ms (Views: 0.4ms | ActiveRecord: 2.3ms | Allocations: 16510)
+
+
+Started POST "/customer/login" for 127.0.0.1 at 2023-08-25 00:42:28 +0300
+Processing by CustomersController#login as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "file"=>#<ActionDispatch::Http::UploadedFile:0x0000563dead709c8 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-ag355w.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (email = 'ceoian848@gmail.com') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21:in `if_customer_exists'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `get_image'
+Completed 200 OK in 301ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 1552)
+
+
+Started POST "/customer/login" for 127.0.0.1 at 2023-08-25 00:42:29 +0300
+Processing by CustomersController#login as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f86241e1b60 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-8keneu.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (1.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (email = 'ceoian848@gmail.com') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21:in `if_customer_exists'
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `get_image'
+Completed 200 OK in 317ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 1552)
+
+
+Started POST "/customer/login" for 127.0.0.1 at 2023-08-25 00:42:30 +0300
+Processing by CustomersController#login as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f86246b92f0 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-1t9dd1b.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (2.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (email = 'ceoian848@gmail.com') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21:in `if_customer_exists'
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `get_image'
+Completed 200 OK in 310ms (Views: 0.3ms | ActiveRecord: 2.5ms | Allocations: 1552)
+
+
+Started POST "/customer/login" for 127.0.0.1 at 2023-08-25 00:46:35 +0300
+Processing by CustomersController#login as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f86252098a8 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-14yf48n.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2960)
+
+
+  
+ActiveRecord::PreparedStatementInvalid (missing value for :ceoian848 in ceoian848@gmail.com = :ceoian848@gmail.com):
+  
+app/controllers/application_controller.rb:23:in `if_customer_exists'
+app/controllers/customers_controller.rb:19:in `login'
+Started POST "/customer/login" for 127.0.0.1 at 2023-08-25 00:47:46 +0300
+Processing by CustomersController#login as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f860c7dfc00 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-c6k0s5.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2958)
+
+
+  
+ActiveRecord::PreparedStatementInvalid (missing value for :ceoian848 in ceoian848@gmail.com = :ceoian848@gmail.com):
+  
+app/controllers/application_controller.rb:23:in `if_customer_exists'
+app/controllers/customers_controller.rb:19:in `login'
+Started POST "/customer/login" for 127.0.0.1 at 2023-08-25 00:47:55 +0300
+Processing by CustomersController#login as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f86100dd3b8 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-gm2a6a.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2950)
+
+
+  
+ActiveRecord::PreparedStatementInvalid (missing value for :ceoian848 in ceoian848@gmail.com = :ceoian848@gmail.com):
+  
+app/controllers/application_controller.rb:23:in `if_customer_exists'
+app/controllers/customers_controller.rb:19:in `login'
+Started POST "/customer/login" for 127.0.0.1 at 2023-08-25 00:49:57 +0300
+Processing by CustomersController#login as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f8614fa7318 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-13x837y.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (password_reset_token = 'ceoian848@gmail.com') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:31:in `if_customer_exists'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.8ms | Allocations: 4599)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/customers_controller.rb:19:in `login'
+Started POST "/customer/login" for 127.0.0.1 at 2023-08-25 00:50:29 +0300
+Processing by CustomersController#login as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f86153e9548 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-1bw1c0.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (email = 'ceoian848@gmail.com') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23:in `if_customer_exists'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `get_image'
+Completed 200 OK in 332ms (Views: 0.4ms | ActiveRecord: 2.8ms | Allocations: 16507)
+
+
+Started POST "/customer/login" for 127.0.0.1 at 2023-08-25 00:52:25 +0300
+Processing by CustomersController#login as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f862451ae30 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-vkios9.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (email = 'ceoian848@gmail.com') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23:in `if_customer_exists'
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `get_image'
+Completed 200 OK in 344ms (Views: 0.3ms | ActiveRecord: 3.3ms | Allocations: 16444)
+
+
+Started POST "/customer/login" for 127.0.0.1 at 2023-08-25 00:52:28 +0300
+Processing by CustomersController#login as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f8625062978 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-8go27d.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (email = 'ceoian848@gmail.com') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23:in `if_customer_exists'
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `get_image'
+Completed 200 OK in 305ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 1566)
+
+
+Started POST "/customer/forgot_password/token" for 127.0.0.1 at 2023-08-25 00:53:49 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/customer/forgot_password/token"):
+  
+Started POST "/customer/forgot_password/token" for 127.0.0.1 at 2023-08-25 00:53:50 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/customer/forgot_password/token"):
+  
+Started POST "/customer/forgot_password/token" for 127.0.0.1 at 2023-08-25 00:54:09 +0300
+Processing by CustomersController#forgot_password_step_2 as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f86148d7da8 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-6v739w.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (password_reset_token = 'ba9d2f') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:31:in `if_customer_exists_by_password_reset'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.6ms | Allocations: 7949)
+
+
+  
+NameError (undefined local variable or method `ok' for #<CustomersController:0x000000000541f0>):
+  
+app/controllers/customers_controller.rb:52:in `forgot_password_step_2'
+Started POST "/customer/forgot_password/token" for 127.0.0.1 at 2023-08-25 00:54:10 +0300
+Processing by CustomersController#forgot_password_step_2 as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f8610946ce8 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-1ghlcqq.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (password_reset_token = 'ba9d2f') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:31:in `if_customer_exists_by_password_reset'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.7ms | Allocations: 2703)
+
+
+  
+NameError (undefined local variable or method `ok' for #<CustomersController:0x00000000054290>):
+  
+app/controllers/customers_controller.rb:52:in `forgot_password_step_2'
+Started POST "/customer/forgot_password/token" for 127.0.0.1 at 2023-08-25 00:54:20 +0300
+Processing by CustomersController#forgot_password_step_2 as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f8618956a00 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-16vuzsp.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (password_reset_token = 'ba9d2f') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:31:in `if_customer_exists_by_password_reset'
+Completed 200 OK in 23ms (Views: 0.4ms | ActiveRecord: 1.5ms | Allocations: 5970)
+
+
+Started POST "/customer/forgot_password/token" for 127.0.0.1 at 2023-08-25 00:54:33 +0300
+Processing by CustomersController#forgot_password_step_2 as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f861081cca0 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-jz8mcf.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (password_reset_token = 'ba9d2f') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:31:in `if_customer_exists_by_password_reset'
+Completed 200 OK in 16ms (Views: 1.2ms | ActiveRecord: 1.4ms | Allocations: 6088)
+
+
+Started POST "/customer/forgot_password/token" for 127.0.0.1 at 2023-08-25 00:54:42 +0300
+Processing by CustomersController#forgot_password_step_2 as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f8614fa4d70 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-vh6d6d.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (password_reset_token = 'ba9d2f0') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:31:in `if_customer_exists_by_password_reset'
+Completed 204 No Content in 5ms (ActiveRecord: 0.3ms | Allocations: 663)
+
+
+Started POST "/customer/forgot_password/token" for 127.0.0.1 at 2023-08-25 00:54:46 +0300
+Processing by CustomersController#forgot_password_step_2 as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f860ca8d010 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-4oopn9.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (password_reset_token = 'ba9d2f') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:31:in `if_customer_exists_by_password_reset'
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 871)
+
+
+Started POST "/customer/forgot_password/token" for 127.0.0.1 at 2023-08-25 00:56:06 +0300
+Processing by CustomersController#forgot_password_step_2 as */*
+  Parameters: {"username"=>"ian", "new_password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "new_password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f861c017210 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-13p62ey.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+[31mUnpermitted parameters: :new_password_confirmation, :new_password. Context: { controller: CustomersController, action: forgot_password_step_2, request: #<ActionDispatch::Request:0x00007f8620d66958>, params: {"username"=>"ian", "new_password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "new_password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f861c017210 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-13p62ey.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">, "controller"=>"customers", "action"=>"forgot_password_step_2"} }[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (password_reset_token = 'ba9d2f') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:31:in `if_customer_exists_by_password_reset'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mCustomer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = ? AND "customers"."id" != ? LIMIT ?[0m  [["email", "ceoian848@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mCustomer Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."password_reset_token" = ? AND "customers"."id" != ? LIMIT ?[0m  [["password_reset_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mCustomer Update (0.3ms)[0m  [1m[33mUPDATE "customers" SET "password_digest" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["password_digest", "[FILTERED]"], ["updated_at", "2023-08-24 21:56:07.256199"], ["id", 1]]
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mTRANSACTION (13.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+Completed 200 OK in 330ms (Views: 0.8ms | ActiveRecord: 16.3ms | Allocations: 9564)
+
+
+Started POST "/customer/login" for 127.0.0.1 at 2023-08-25 00:56:34 +0300
+Processing by CustomersController#login as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f86205df2c0 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-a64mmr.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (email = 'ceoian848@gmail.com') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23:in `if_customer_exists'
+Completed 400 Bad Request in 318ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 845)
+
+
+Started POST "/customer/login" for 127.0.0.1 at 2023-08-25 00:56:41 +0300
+Processing by CustomersController#login as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f8620287050 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-lnufj8.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (email = 'ceoian848@gmail.com') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23:in `if_customer_exists'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `get_image'
+Completed 200 OK in 329ms (Views: 0.4ms | ActiveRecord: 1.4ms | Allocations: 12593)
+
+
+Started POST "/customer/forgot_password/token" for 127.0.0.1 at 2023-08-25 00:57:02 +0300
+Processing by CustomersController#forgot_password_step_2 as */*
+  Parameters: {"username"=>"ian", "new_password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "new_password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f861893f148 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-1rf3u82.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+[31mUnpermitted parameters: :new_password_confirmation, :new_password. Context: { controller: CustomersController, action: forgot_password_step_2, request: #<ActionDispatch::Request:0x00007f861894c578>, params: {"username"=>"ian", "new_password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "new_password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f861893f148 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-1rf3u82.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">, "controller"=>"customers", "action"=>"forgot_password_step_2"} }[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (password_reset_token = 'ba9d2f') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:31:in `if_customer_exists_by_password_reset'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mCustomer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = ? AND "customers"."id" != ? LIMIT ?[0m  [["email", "ceoian848@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mCustomer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."password_reset_token" = ? AND "customers"."id" != ? LIMIT ?[0m  [["password_reset_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mCustomer Update (0.3ms)[0m  [1m[33mUPDATE "customers" SET "password_digest" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["password_digest", "[FILTERED]"], ["updated_at", "2023-08-24 21:57:02.912321"], ["id", 1]]
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mTRANSACTION (11.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+Completed 200 OK in 322ms (Views: 1.4ms | ActiveRecord: 12.7ms | Allocations: 4002)
+
+
+Started POST "/customer/forgot_password/token" for 127.0.0.1 at 2023-08-25 00:57:19 +0300
+Processing by CustomersController#forgot_password_step_2 as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f8620d2e738 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-4kzvfh.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (password_reset_token = 'ba9d2f') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:31:in `if_customer_exists_by_password_reset'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mCustomer Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = ? AND "customers"."id" != ? LIMIT ?[0m  [["email", "ceoian848@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mCustomer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."password_reset_token" = ? AND "customers"."id" != ? LIMIT ?[0m  [["password_reset_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+Completed 200 OK in 21ms (Views: 0.7ms | ActiveRecord: 1.2ms | Allocations: 3353)
+
+
+Started POST "/customer/forgot_password/token" for 127.0.0.1 at 2023-08-25 00:57:21 +0300
+Processing by CustomersController#forgot_password_step_2 as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f860c99fba8 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-x6moxl.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (password_reset_token = 'ba9d2f') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:31:in `if_customer_exists_by_password_reset'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mCustomer Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = ? AND "customers"."id" != ? LIMIT ?[0m  [["email", "ceoian848@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mCustomer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."password_reset_token" = ? AND "customers"."id" != ? LIMIT ?[0m  [["password_reset_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+Completed 200 OK in 25ms (Views: 0.7ms | ActiveRecord: 1.6ms | Allocations: 3348)
+
+
+Started POST "/customer/login" for 127.0.0.1 at 2023-08-25 00:57:32 +0300
+Processing by CustomersController#login as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f8614fb9fe0 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-1ev1mr9.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (email = 'ceoian848@gmail.com') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23:in `if_customer_exists'
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `get_image'
+Completed 200 OK in 310ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1566)
+
+
+Started POST "/customer/login" for 127.0.0.1 at 2023-08-25 00:57:34 +0300
+Processing by CustomersController#login as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f8614f4fc30 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-biputn.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (email = 'ceoian848@gmail.com') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23:in `if_customer_exists'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `get_image'
+Completed 200 OK in 305ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 1567)
+
+
+Started POST "/customer/login" for 127.0.0.1 at 2023-08-25 00:58:23 +0300
+Processing by CustomersController#login as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x0000563de996d598 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-1kbm2lh.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (email = 'ceoian848@gmail.com') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23:in `if_customer_exists'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `get_image'
+Completed 200 OK in 343ms (Views: 0.4ms | ActiveRecord: 2.1ms | Allocations: 16451)
+
+
+Started POST "/customer/forgot_password/token" for 127.0.0.1 at 2023-08-25 00:58:39 +0300
+Processing by CustomersController#forgot_password_step_2 as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f86149c61b0 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-1ne87fs.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (password_reset_token = 'ba9d2f') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:31:in `if_customer_exists_by_password_reset'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mCustomer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = ? AND "customers"."id" != ? LIMIT ?[0m  [["email", "ceoian848@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mCustomer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."password_reset_token" = ? AND "customers"."id" != ? LIMIT ?[0m  [["password_reset_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 1.0ms | Allocations: 3549)
+
+
+Started POST "/customer/forgot_password/token" for 127.0.0.1 at 2023-08-25 00:58:41 +0300
+Processing by CustomersController#forgot_password_step_2 as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f8614d9c2a8 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-1kbh1is.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (password_reset_token = 'ba9d2f') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:31:in `if_customer_exists_by_password_reset'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mCustomer Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = ? AND "customers"."id" != ? LIMIT ?[0m  [["email", "ceoian848@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mCustomer Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."password_reset_token" = ? AND "customers"."id" != ? LIMIT ?[0m  [["password_reset_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 3272)
+
+
+Started POST "/customer/forgot_password/token" for 127.0.0.1 at 2023-08-25 00:58:41 +0300
+Processing by CustomersController#forgot_password_step_2 as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f861554c2f0 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-1gwo2np.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (password_reset_token = 'ba9d2f') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:31:in `if_customer_exists_by_password_reset'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mCustomer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = ? AND "customers"."id" != ? LIMIT ?[0m  [["email", "ceoian848@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mCustomer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."password_reset_token" = ? AND "customers"."id" != ? LIMIT ?[0m  [["password_reset_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 3272)
+
+
+Started POST "/customer/forgot_password/token" for 127.0.0.1 at 2023-08-25 00:58:42 +0300
+Processing by CustomersController#forgot_password_step_2 as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f8624221e18 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-1f7yqh6.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (password_reset_token = 'ba9d2f') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:31:in `if_customer_exists_by_password_reset'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mCustomer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = ? AND "customers"."id" != ? LIMIT ?[0m  [["email", "ceoian848@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mCustomer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."password_reset_token" = ? AND "customers"."id" != ? LIMIT ?[0m  [["password_reset_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/customers_controller.rb:55:in `forgot_password_step_2'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 3274)
+
+
