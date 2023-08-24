@@ -31,6 +31,15 @@ class CustomersController < ApplicationController
         end
     end
 
+    # Forgot Password
+    def forgot_password
+        sql = "email = :email"
+        user = Customer.where(sql, { email: user_params[:email] }).first
+        if user
+            
+        end
+    end
+
     # testing jwt code
     def test_token
         verify_auth

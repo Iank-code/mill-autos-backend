@@ -1,0 +1,2 @@
+class ForgotMailer < ApplicationMailer
+end
