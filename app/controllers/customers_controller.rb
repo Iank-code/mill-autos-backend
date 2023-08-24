@@ -36,7 +36,8 @@ class CustomersController < ApplicationController
         sql = "email = :email"
         user = Customer.where(sql, { email: user_params[:email] }).first
         if user
-            
+            # Send email if user is found
+            ForgotMailer.with(user: user.email).forgot_email(user.email).deliver_now
         end
     end
 
