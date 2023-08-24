@@ -15,10 +15,7 @@ class CustomersController < ApplicationController
 
     # Loggin in
     def login
-        sql = "username = :username"
-
-        user = Customer.where(sql, { username: user_params[:username], email: user_params[:email] }).first
-
+        user = if_customer_exists
         if user.authenticate(user_params[:password])
             token = encode(user.id, user.email)
             user_attributes = user.attributes.except("updated_at", "created_at", "password_digest")
@@ -34,8 +31,7 @@ class CustomersController < ApplicationController
 
     # Forgot Password
     def forgot_password_step_1
-        sql = "email = :email"
-        user = Customer.where(sql, { email: user_params[:email] }).first
+        user = if_customer_exists()
         if user
             # Generating Reset Token
             random_string = SecureRandom.hex(3)
@@ -49,6 +45,19 @@ class CustomersController < ApplicationController
         end
     end
 
+    def forgot_password_step_2
+        user = if_customer_exists_by_password_reset
+
+        if user
+            user.password = params[:new_password]
+            user.password_confirmation = params[:new_password_confirmation]
+
+            user.save
+
+            app_response(message: "Your password has been reset. Login to proceed....", status: :ok)
+        end
+    end
+
     # testing jwt code
     def test_token
         verify_auth
@@ -58,6 +67,6 @@ class CustomersController < ApplicationController
     # Private methods
     private
     def user_params
-        params.permit(:username, :email, :password, :password_confirmation, :phone_number, :file)
+        params.permit(:username, :email, :password, :password_confirmation, :phone_number, :file, :password_reset_token)
     end
 end
