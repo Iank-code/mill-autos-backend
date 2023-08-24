@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   post '/customer/register', to:'customers#register'
   post '/customer/login', to:'customers#login'
-  post '/customer/forgot_password', to:'customers#forgot_password'
+  post '/customer/forgot_password', to:'customers#forgot_password_step_1'
 
   # Testing JWT token
   post "/customer/login/test", to: "customers#test_token"

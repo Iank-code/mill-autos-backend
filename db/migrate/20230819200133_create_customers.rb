@@ -5,6 +5,7 @@ class CreateCustomers < ActiveRecord::Migration[7.0]
       t.string :email
       t.integer :phone_number
       t.string :password_digest
+      t.string :password_reset_token, null: true
 
       t.timestamps
     end

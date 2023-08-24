@@ -8,11 +8,15 @@ class ApplicationController < ActionController::API
     end
 
     # Getting the image from active storage
-    def get_inage(uid)
+    def get_image(uid)
         blob = ActiveStorage::Blob.find(uid)
         image = url_for(blob)
 
-        return image
+        if image
+
+            return image
+        end
+
     end
 
     # Generating secret key
