@@ -38,6 +38,8 @@ class CustomersController < ApplicationController
         if user
             # Send email if user is found
             ForgotMailer.with(user: user.email).forgot_email(user.email).deliver_now
+
+            app_response(message: "An email has been sent successfully", status: 200)
         end
     end
 

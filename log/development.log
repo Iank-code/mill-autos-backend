@@ -10227,3 +10227,54 @@ Content-Transfer-Encoding: 7bit
 Completed 204 No Content in 5730ms (ActiveRecord: 1.6ms | Allocations: 11833)
 
 
+Started POST "/customer/forgot_password" for 127.0.0.1 at 2023-08-24 21:13:25 +0300
+Processing by CustomersController#forgot_password as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe244078568 @tempfile=#<Tempfile:/tmp/RackMultipart20230824-60784-yvngye.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+[31mUnpermitted parameter: :image. Context: { controller: CustomersController, action: forgot_password, request: #<ActionDispatch::Request:0x00007fe2440a8768>, params: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe244078568 @tempfile=#<Tempfile:/tmp/RackMultipart20230824-60784-yvngye.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">, "controller"=>"customers", "action"=>"forgot_password"} }[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (email = 'ceoian848@gmail.com') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:37:in `forgot_password'
+  Rendering layout layouts/mailer.html.erb
+  Rendering forgot_mailer/forgot_email.html.erb within layouts/mailer
+  Rendered forgot_mailer/forgot_email.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/mailer.html.erb (Duration: 1.5ms | Allocations: 83)
+ForgotMailer#forgot_email: processed outbound mail in 4.3ms
+Delivered mail 64e79dc537e03_ed70e1a0730a7@mose-pc.mail (5552.8ms)
+Date: Thu, 24 Aug 2023 21:13:25 +0300
+From: kian99564@gmail.com
+To: ceoian848@gmail.com
+Message-ID: <64e79dc537e03_ed70e1a0730a7@mose-pc.mail>
+Subject: Forgot Password
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi there,</h1>
+    <p>
+      We have recieved a request to change the password,
+    </p>
+    <p>If this is not you, please ignore this</p>
+  </body>
+</html>
+  </body>
+</html>
+
+Completed 200 OK in 5580ms (Views: 0.9ms | ActiveRecord: 1.8ms | Allocations: 11630)
+
+
