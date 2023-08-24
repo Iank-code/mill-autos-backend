@@ -8,6 +8,13 @@ Rails.application.routes.draw do
   # root "articles#index"
   post '/customer/register', to:'customers#register'
   post '/customer/login', to:'customers#login'
+  # First step in reseting password
+  post '/customer/forgot_password', to:'customers#forgot_password_step_1'
+  # Second and last step in reseting password
+  post '/customer/forgot_password/token', to: 'customers#forgot_password_step_2'
+
+  # Testing JWT token
+  post "/customer/login/test", to: "customers#test_token"
 
   # Loggin in for admin
   post '/admin/login', to:'admins#login'
