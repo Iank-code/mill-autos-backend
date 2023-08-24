@@ -12242,3 +12242,28 @@ Processing by CustomersController#forgot_password_step_2 as */*
 Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 3274)
 
 
+Started POST "/customer/login" for 127.0.0.1 at 2023-08-25 00:59:55 +0300
+Processing by CustomersController#login as */*
+  Parameters: {"username"=>"ian", "password_confirmation"=>"[FILTERED]", "email"=>"ceoian848@gmail.com", "password"=>"[FILTERED]", "phone_number"=>"+254704412004", "password_reset_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x0000563deb1ffde0 @tempfile=#<Tempfile:/tmp/RackMultipart20230825-72601-c8ynng.jpg>, @content_type="image/jpeg", @original_filename="web-development.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"web-development.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE (email = 'ceoian848@gmail.com') ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23:in `if_customer_exists'
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `get_image'
+Completed 200 OK in 306ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 1566)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b9841afc9931c999acd2bf9b9b837c6189eb2d14/web-development.jpg" for ::1 at 2023-08-25 01:00:03 +0300
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b9841afc9931c999acd2bf9b9b837c6189eb2d14", "filename"=>"web-development"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: 1kzpok5lxt1cxyamt6nq9dwocilx (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNV3Q2Y0c5ck5XeDRkREZqZUhsaGJYUTJibkU1WkhkdlkybHNlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5kbFlpMWtaWFpsYkc5d2JXVnVkQzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozZGxZaTFrWlhabGJHOXdiV1Z1ZEM1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMy0wOC0yNFQyMjowNTowMy4zNThaIiwicHVyIjoiYmxvYl9rZXkifX0=--7baa34ea269024d64b2de9cea001402978825ef6/web-development.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNV3Q2Y0c5ck5XeDRkREZqZUhsaGJYUTJibkU1WkhkdlkybHNlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5kbFlpMWtaWFpsYkc5d2JXVnVkQzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozZGxZaTFrWlhabGJHOXdiV1Z1ZEM1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMy0wOC0yNFQyMjowNTowMy4zNThaIiwicHVyIjoiYmxvYl9rZXkifX0=--7baa34ea269024d64b2de9cea001402978825ef6/web-development.jpg
+Completed 302 Found in 18ms (ActiveRecord: 0.5ms | Allocations: 2505)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNV3Q2Y0c5ck5XeDRkREZqZUhsaGJYUTJibkU1WkhkdlkybHNlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5kbFlpMWtaWFpsYkc5d2JXVnVkQzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozZGxZaTFrWlhabGJHOXdiV1Z1ZEM1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMy0wOC0yNFQyMjowNTowMy4zNThaIiwicHVyIjoiYmxvYl9rZXkifX0=--7baa34ea269024d64b2de9cea001402978825ef6/web-development.jpg" for ::1 at 2023-08-25 01:00:03 +0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"web-development"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 181)
+
+
