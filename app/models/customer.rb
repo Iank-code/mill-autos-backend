@@ -6,4 +6,9 @@ class Customer < ApplicationRecord
         presence: true,
         uniqueness: true
     }
+
+    validates :password_reset_token,{
+        uniqueness: true,
+        allow_nil: true
+    }
 end
