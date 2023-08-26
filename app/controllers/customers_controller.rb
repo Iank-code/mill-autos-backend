@@ -7,7 +7,7 @@ class CustomersController < ApplicationController
             # Send email if user is created successfully
             UserMailer.with(user: user).welcome_email(user.email).deliver_now
 
-            user_attributes = user.attributes.except("updated_at", "created_at", "password_digest")
+            user_attributes = user.attributes.except("updated_at", "created_at", "password_digest", "password_reset_token")
 
             app_response(message: "User created successfully", status: :created, data: {user: user_attributes})
         end
@@ -18,7 +18,7 @@ class CustomersController < ApplicationController
         user = if_customer_exists
         if user.authenticate(user_params[:password])
             token = encode(user.id, user.email)
-            user_attributes = user.attributes.except("updated_at", "created_at", "password_digest")
+            user_attributes = user.attributes.except("updated_at", "created_at", "password_digest", "password_reset_token")
 
             image = get_image(user.id)
 
