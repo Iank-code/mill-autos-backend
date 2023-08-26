@@ -20,6 +20,11 @@ Rails.application.routes.draw do
   # Loggin in for admin
   post '/admin/login', to:'admins#login'
 
+  # Car controller
+  # Creating a new car
+  post '/car/create', to:'cars#new_car'
+
+
   # For mpesa
   post "stkpush", to: "mpesas#stkpush"
   post 'stkquery', to: 'mpesas#stkquery'

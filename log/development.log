@@ -12828,3 +12828,164 @@ Processing by AdminsController#login as */*
 Completed 200 OK in 367ms (Views: 0.3ms | ActiveRecord: 2.6ms | Allocations: 4366)
 
 
+Started POST "/car/create" for ::1 at 2023-08-26 23:41:46 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20230826203018_create_cars.rb
+
+
+):
+  
+activerecord (7.0.7) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.7) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.7) lib/active_support/file_update_checker.rb:83:in `execute'
+activesupport (7.0.7) lib/active_support/file_update_checker.rb:93:in `execute_if_updated'
+activerecord (7.0.7) lib/active_record/migration.rb:599:in `block in call'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.7) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCars (20230826203018)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "cars" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "model_name" varchar, "brand_name" varchar, "price" integer, "year_of_manufacture" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230826203018"]]
+  [1m[36mTRANSACTION (11.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/car/create" for ::1 at 2023-08-26 23:42:37 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CarsController#create_car as */*
+  Parameters: {"model_name"=>"", "brand_name"=>"ianoz", "price"=>"ianoz", "year_of_manufacture"=>"", "images"=>#<ActionDispatch::Http::UploadedFile:0x00007f28c0f1b8d8 @tempfile=#<Tempfile:/tmp/RackMultipart20230826-20094-uf79q6.jpg>, @content_type="image/jpeg", @original_filename="welcomeback.jpg", @headers="Content-Disposition: form-data; name=\"images\"; filename=\"welcomeback.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+[31mUnpermitted parameter: :images. Context: { controller: CarsController, action: create_car, request: #<ActionDispatch::Request:0x00007f28c00fe200>, params: {"model_name"=>"", "brand_name"=>"ianoz", "price"=>"ianoz", "year_of_manufacture"=>"", "images"=>#<ActionDispatch::Http::UploadedFile:0x00007f28c0f1b8d8 @tempfile=#<Tempfile:/tmp/RackMultipart20230826-20094-uf79q6.jpg>, @content_type="image/jpeg", @original_filename="welcomeback.jpg", @headers="Content-Disposition: form-data; name=\"images\"; filename=\"welcomeback.jpg\"\r\nContent-Type: image/jpeg\r\n">, "controller"=>"cars", "action"=>"create_car"} }[0m
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.0ms | Allocations: 24830)
+
+
+  
+ActiveRecord::DangerousAttributeError (model_name is defined by Active Record. Check to make sure that you don't have an attribute or method with the same name.):
+  
+app/controllers/cars_controller.rb:4:in `create_car'
+Started POST "/cars" for ::1 at 2023-08-26 23:44:31 +0300
+Processing by CarsController#create as */*
+  Parameters: {"model_name"=>"", "brand_name"=>"ianoz", "price"=>"ianoz", "year_of_manufacture"=>"", "images"=>#<ActionDispatch::Http::UploadedFile:0x00007f28d4b1a310 @tempfile=#<Tempfile:/tmp/RackMultipart20230826-20094-xblfqx.jpg>, @content_type="image/jpeg", @original_filename="welcomeback.jpg", @headers="Content-Disposition: form-data; name=\"images\"; filename=\"welcomeback.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+[31mUnpermitted parameter: :images. Context: { controller: CarsController, action: create, request: #<ActionDispatch::Request:0x00007f28c059d4f0>, params: {"model_name"=>"", "brand_name"=>"ianoz", "price"=>"ianoz", "year_of_manufacture"=>"", "images"=>#<ActionDispatch::Http::UploadedFile:0x00007f28d4b1a310 @tempfile=#<Tempfile:/tmp/RackMultipart20230826-20094-xblfqx.jpg>, @content_type="image/jpeg", @original_filename="welcomeback.jpg", @headers="Content-Disposition: form-data; name=\"images\"; filename=\"welcomeback.jpg\"\r\nContent-Type: image/jpeg\r\n">, "controller"=>"cars", "action"=>"create"} }[0m
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.4ms | Allocations: 3696)
+
+
+  
+ActiveRecord::DangerousAttributeError (model_name is defined by Active Record. Check to make sure that you don't have an attribute or method with the same name.):
+  
+app/controllers/cars_controller.rb:4:in `create'
+Started POST "/cars" for ::1 at 2023-08-26 23:45:14 +0300
+Processing by CarsController#create as */*
+  Parameters: {"model_name"=>"", "brand_name"=>"ianoz", "price"=>"ianoz", "year_of_manufacture"=>"", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f28b014ca50 @tempfile=#<Tempfile:/tmp/RackMultipart20230826-20094-14sxkhg.jpg>, @content_type="image/jpeg", @original_filename="welcomeback.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"welcomeback.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.6ms | Allocations: 3683)
+
+
+  
+ActiveRecord::DangerousAttributeError (model_name is defined by Active Record. Check to make sure that you don't have an attribute or method with the same name.):
+  
+app/controllers/cars_controller.rb:4:in `create'
+Started POST "/cars/create" for ::1 at 2023-08-26 23:45:52 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/cars/create"):
+  
+Started POST "/car/create" for ::1 at 2023-08-26 23:46:01 +0300
+Processing by CarsController#new_car as */*
+  Parameters: {"model_name"=>"", "brand_name"=>"ianoz", "price"=>"ianoz", "year_of_manufacture"=>"", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f28c063c2a8 @tempfile=#<Tempfile:/tmp/RackMultipart20230826-20094-125hpso.jpg>, @content_type="image/jpeg", @original_filename="welcomeback.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"welcomeback.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 3.0ms | Allocations: 3572)
+
+
+  
+ActiveRecord::DangerousAttributeError (model_name is defined by Active Record. Check to make sure that you don't have an attribute or method with the same name.):
+  
+app/controllers/cars_controller.rb:4:in `new_car'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCars (20230826203018)
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.2ms)[0m  [1m[35mDROP TABLE "cars"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (1.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20230826203018"]]
+  [1m[36mTRANSACTION (19.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCars (20230826203018)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "cars" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "model" varchar, "brand" varchar, "price" integer, "year_of_manufacture" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230826203018"]]
+  [1m[36mTRANSACTION (15.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/car/create" for ::1 at 2023-08-26 23:48:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CarsController#new_car as */*
+  Parameters: {"model"=>"", "brand"=>"ianoz", "price"=>"ianoz", "year_of_manufacture"=>"", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f8d501af150 @tempfile=#<Tempfile:/tmp/RackMultipart20230826-21141-1lu2n3p.jpg>, @content_type="image/jpeg", @original_filename="welcomeback.jpg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"welcomeback.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cars_controller.rb:4:in `new_car'
+  [1m[36mCar Create (0.4ms)[0m  [1m[32mINSERT INTO "cars" ("model", "brand", "price", "year_of_manufacture", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["model", ""], ["brand", "ianoz"], ["price", 0], ["year_of_manufacture", ""], ["created_at", "2023-08-26 20:48:53.100818"], ["updated_at", "2023-08-26 20:48:53.100818"]]
+  ↳ app/controllers/cars_controller.rb:4:in `new_car'
+  [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Car"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:4:in `new_car'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Car"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:4:in `new_car'
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["key", "grxgsvs02k4klzb8jeoufhlnggbe"], ["filename", "welcomeback.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 885563], ["checksum", "XL8gBgoKIaM5ULL1iBSnOw=="], ["created_at", "2023-08-26 20:48:53.203850"]]
+  ↳ app/controllers/cars_controller.rb:4:in `new_car'
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "file"], ["record_type", "Car"], ["record_id", 1], ["blob_id", 2], ["created_at", "2023-08-26 20:48:53.207247"]]
+  ↳ app/controllers/cars_controller.rb:4:in `new_car'
+  [1m[36mCar Update (0.3ms)[0m  [1m[33mUPDATE "cars" SET "updated_at" = ? WHERE "cars"."id" = ?[0m  [["updated_at", "2023-08-26 20:48:53.209887"], ["id", 1]]
+  ↳ app/controllers/cars_controller.rb:4:in `new_car'
+  [1m[36mTRANSACTION (13.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cars_controller.rb:4:in `new_car'
+[36m  Disk Storage (3.5ms) [0m[32mUploaded file to key: grxgsvs02k4klzb8jeoufhlnggbe (checksum: XL8gBgoKIaM5ULL1iBSnOw==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 7f226f19-5d2e-4a8d-82bc-64a038c3ae18) to Async(default) with arguments: #<GlobalID:0x00007f8d50d9a988 @uri=#<URI::GID gid://mill-autos-backend/ActiveStorage::Blob/2>>
+Completed 201 Created in 350ms (Views: 0.3ms | ActiveRecord: 21.0ms | Allocations: 97248)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7f226f19-5d2e-4a8d-82bc-64a038c3ae18]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7f226f19-5d2e-4a8d-82bc-64a038c3ae18] Performing ActiveStorage::AnalyzeJob (Job ID: 7f226f19-5d2e-4a8d-82bc-64a038c3ae18) from Async(default) enqueued at 2023-08-26T20:48:53Z with arguments: #<GlobalID:0x00007f8d3003f330 @uri=#<URI::GID gid://mill-autos-backend/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7f226f19-5d2e-4a8d-82bc-64a038c3ae18] [36m  Disk Storage (1.8ms) [0m[34mDownloaded file from key: grxgsvs02k4klzb8jeoufhlnggbe[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7f226f19-5d2e-4a8d-82bc-64a038c3ae18]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7f226f19-5d2e-4a8d-82bc-64a038c3ae18]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"width\":3032,\"height\":2021,\"analyzed\":true}"], ["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7f226f19-5d2e-4a8d-82bc-64a038c3ae18]   [1m[36mTRANSACTION (13.8ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7f226f19-5d2e-4a8d-82bc-64a038c3ae18] Performed ActiveStorage::AnalyzeJob (Job ID: 7f226f19-5d2e-4a8d-82bc-64a038c3ae18) from Async(default) in 391.84ms
