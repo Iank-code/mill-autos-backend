@@ -22,7 +22,7 @@ class CustomersController < ApplicationController
 
             image = get_image(user.id)
 
-            app_response(message: "Login was successful", status: 200, data: {token: token, user: user_attributes, image: image})
+            app_response(message: "Login was successful", status: 200, data: {access_token: token, user: user_attributes, image: image})
 
         else
             app_response(message: "Authentication failed", status:400)

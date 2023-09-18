@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   # Loggin in for admin
   post '/admin/login', to:'admins#login'
+  post '/admin/register', to:'admins#register'
 
   # Car controller
   # Creating a new car

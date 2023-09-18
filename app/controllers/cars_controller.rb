@@ -1,28 +1,25 @@
 class CarsController < ApplicationController
     # Posting the car(s)
     def new_car
-        car = Car.create(car_params)
-        car_attributes = car.attributes.except("updated_at", "created_at")
+        @car = Car.create(car_params)
+        car_attributes = @car.attributes.except("updated_at", "created_at")
 
         app_response(message: "Car uploaded successfully", status: :created, data: {car: car_attributes})
     end
 
-    def index
-        @car = Car.all
-
-        images = []
-        @car.each do | car |
-            img = get_image(car.id)
-
-            car_data = car.attributes.merge(pics: img)
-            images << car_data
+    def show
+        blob = ActiveStorage::Blob.find(params[:id])
+        if blob.present?
+            img = url_for(blob)
+            app_response(data: "img")
+        else
+        head :not_found
         end
-        app_response(data: images, status: 200)
     end
 
 
     private
     def car_params
-        params.permit(:model, :brand, :price, :year_of_manufacture, files: [])
+        params.require(:car).permit(:model, :brand, :price, :year_of_manufacture, :image)
     end
 end

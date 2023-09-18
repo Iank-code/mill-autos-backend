@@ -11,7 +11,7 @@ class ApplicationController < ActionController::API
 
     # Getting the image from active storage
     def get_image(uid)
-        blob = ActiveStorage::Blob.find(uid)
+        blob = ActiveStorage::Blob.find_by(id: uid)
         image = url_for(blob)
 
         return image

@@ -1,3 +1,3 @@
 class Car < ApplicationRecord
-    has_many_attached :files
+    has_one_attached :image
 end
