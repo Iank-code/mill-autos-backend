@@ -4,7 +4,7 @@ class Customer < ApplicationRecord
 
     validates :email, {
         presence: true,
-        uniqueness: true
+        # uniqueness: true
     }
 
     validates :password_reset_token,{
